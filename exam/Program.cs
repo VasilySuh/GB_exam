@@ -7,13 +7,21 @@
 //  [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 //  [“Russia”, “Denmark”, “Kazan”] → []
 
+void PrintArray(string[] array)
+{
+    for(int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]}");
+    }
+}
+
 Console.WriteLine("Введите размер первоначального массива: ");
 int sizeOfArray = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите новый первоначальный массив: ");
-string[] array = new string[sizeOfArray];
+string[] arr = new string[sizeOfArray];
 for (int i = 0; i < sizeOfArray; i++)
 {
-    array[i] = Console.ReadLine();
+    arr[i] = Console.ReadLine();
 }
-Console.WriteLine(array);
 
+PrintArray(arr);
